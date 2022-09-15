@@ -1,0 +1,31 @@
+.contenedor {
+  background-position: center;
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: grey;
+  justify-content: center;
+  text-align: center;
+}
+
+.textField {
+}
+
+body {
+  margin: 0;
+}
+
+.link_breadcrumps {
+  font-style: oblique;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.enabled {
+  cursor: pointer;
+  color: #482bbc !important;
+}
+
