@@ -1,9 +1,10 @@
 import {
+  Button,
   Card,
   CardContent,
   Divider,
   Grid,
-  OutlinedInput,
+  TextField,
 } from "@mui/material";
 import React from "react";
 import CustomAppBar from "../components/CustomAppBar";
@@ -21,69 +22,124 @@ function Exportar() {
           margin: "60px auto",
         }}
       >
-        <Card style={{ padding: 60 }}>
+        <Card
+          style={{
+            height: "70vh",
+            width: "450px",
+            margin: "20px auto",
+            border: "1px solid #DDDDDD",
+            borderRadius: "7px",
+          }}
+          variant="outlined"
+        >
           <CardContent>
-            <Grid container spacing={4}>
-              <Grid
-                xs={6}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Nombres</label>
-                <OutlinedInput />
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            >
+              <Grid item xs={6}>
+                <TextField
+                  className="textField"
+                  label="Nombre"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              <Grid
-                xs={6}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Codigo estudiante</label>
-                <OutlinedInput />
+              <Grid item xs={6}>
+                <TextField
+                  className="textField"
+                  label="Codigo Estudiante"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              <Grid
-                xs={6}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Fecha ingreso</label>
-                <OutlinedInput type="date" />
+              <Grid item xs={6}>
+                <TextField
+                  className="textField"
+                  label="Fecha Ingreso"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              <Grid
-                xs={6}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Dirección</label>
-                <OutlinedInput />
+              <Grid item xs={6}>
+                <TextField
+                  className="textField"
+                  label="Direccion"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              <Grid
-                xs={6}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Telefono</label>
-                <OutlinedInput />
+              <Grid item xs={6}>
+                <TextField
+                  className="textField"
+                  label="Telefono"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              <Grid
-                xs={6}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Celular</label>
-                <OutlinedInput />
+              <Grid item xs={6}>
+                <TextField
+                  className="textField"
+                  label="Celular"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              <Grid
-                xs={12}
-                item
-                sx={{ display: "flex", flexDirection: "column" }}
-              >
-                <label>Correo Electronico</label>
-                <OutlinedInput />
+
+              <Grid item xs={12} sm={12}>
+                <TextField
+                  fullWidth
+                  className="textField"
+                  label="Correo Electronico"
+                  color="warning"
+                  variant="outlined"
+                />
               </Grid>
-              
             </Grid>
           </CardContent>
-          <Divider sx={{ width: "100%" }} />
+
+          <CardContent>
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            >
+              <Grid item xs={12}>
+                <Button
+                  style={{
+                    float: "right",
+                  }}
+                  size="small"
+                  variant="contained"
+                  color="secondary"
+                >
+                  Validar
+                </Button>
+              </Grid>
+            </Grid>
+          </CardContent>
+          <Divider style={{ marginTop: 10 }} />
+          <div
+            style={{
+              marginTop: 100,
+              display: "flex",
+              justifyContent: "space-evenly",
+            }}
+          >
+            <Button variant="contained" style={{ background: "#E57A80" }}>
+              Texto
+            </Button>
+            <Button variant="contained" style={{ background: "#49E162" }}>
+              Excel
+            </Button>
+            <Button variant="contained" style={{ background: "#E5E07A" }}>
+              XML
+            </Button>
+            <Button variant="contained" style={{ background: "#E39043" }}>
+              JSON
+            </Button>
+          </div>
         </Card>
       </main>
     </React.Fragment>
