@@ -1,5 +1,6 @@
-import { AppBar, Breadcrumbs, Link, Toolbar, Typography } from "@mui/material";
+import { AppBar, Breadcrumbs, Toolbar, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function CustomAppBar() {
   return (
@@ -18,13 +19,26 @@ export default function CustomAppBar() {
           Expresiones Regulares
         </Typography>
         <Breadcrumbs aria-label="breadcrumb">
-          <Link underline="hover" className="link_breadcrumps enabled" href="/">
+          <Link
+            underline="hover"
+            className="link_breadcrumps enabled"
+            to={"/validar"}
+          >
             Validar
           </Link>
-          <Link className="link_breadcrumps" underline="hover" color="inherit">
+          <Link
+            className="link_breadcrumps"
+            underline="hover"
+            color="inherit"
+            to={"/exportar"}
+          >
             Exportar
           </Link>
-          <Link underline="hover" className="link_breadcrumps enabled">
+          <Link
+            underline="hover"
+            className="link_breadcrumps enabled"
+            to={"/importar"}
+          >
             Importar
           </Link>
         </Breadcrumbs>
