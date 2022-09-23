@@ -1,1 +1,0 @@
-# function globals to use how helpers

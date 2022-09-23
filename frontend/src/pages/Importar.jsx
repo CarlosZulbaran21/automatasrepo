@@ -124,20 +124,23 @@ function Importar() {
     reader.onload = async (e) => {
       let xml = e.target.result;
       xml = new XMLParser().parseFromString(xml);
-
+      let array = [];
+      
       let children_padre = xml.children[0]?.children;
       if (Array.isArray(children_padre)) {
         children_padre.forEach((padre) => {
           if (Array.isArray(padre.children)) {
-            // se itera la cantidad de informacion en el array de objetos
-            let array = [];
             let object = {};
+            // se itera la cantidad de informacion en el array de objetoss
+              // console.log(object)
             padre.children.forEach((child) => {
+              // console.log(child)
               object[child.name] = child.value;
             });
             array.push(object);
-            setRows(array);
+            
           }
+          setRows(array);
         });
       }
     };
