@@ -26,14 +26,14 @@ export default function CustomAppBar() {
           >
             Validar
           </Link>
-          <Link
+          {/* <Link
             className="link_breadcrumps"
             underline="hover"
             color="inherit"
             to={"/exportar"}
           >
             Exportar
-          </Link>
+          </Link> */}
           <Link
             underline="hover"
             className="link_breadcrumps enabled"
